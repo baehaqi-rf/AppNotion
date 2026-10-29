@@ -33,19 +33,13 @@ jobs:
           channel: 'stable'
           cache: true
 
-      - name: Install Melos
-        run: |
-          dart pub global activate melos
-          echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
-
-      - name: Melos Bootstrap
-        run: |
-          export PATH="$HOME/.pub-cache/bin:$PATH"
-          melos bootstrap
+      - name: Print Flutter Version
+        run: flutter --version
 
       - name: Build Flutter Web
         run: |
           cd apps/appflowy
+          flutter pub get
           flutter build web -t lib/main_web.dart --release --base-href "/${{ github.event.repository.name }}/"
 
       - name: Setup Pages
