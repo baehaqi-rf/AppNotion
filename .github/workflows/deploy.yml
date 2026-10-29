@@ -33,11 +33,15 @@ jobs:
           channel: 'stable'
           cache: true
 
-      - name: Install Melos & Bootstrap
+      - name: Install Melos
         run: |
           dart pub global activate melos
           echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
-          dart run melos bootstrap
+
+      - name: Melos Bootstrap
+        run: |
+          export PATH="$HOME/.pub-cache/bin:$PATH"
+          melos bootstrap
 
       - name: Build Flutter Web
         run: |
