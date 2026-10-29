@@ -1,0 +1,10 @@
+name: appflowy_monorepo
+description: AppFlowy Flutter Monorepo - 1:1 Ground-Truth REA Replication of AppFlowy
+version: 0.11.4
+publish_to: "none"
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dev_dependencies:
+  melos: ^8.10.0
