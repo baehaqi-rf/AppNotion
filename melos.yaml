@@ -4,7 +4,10 @@ repository: https://github.com/AppFlowy-IO/AppFlowy
 packages:
   - apps/*
   - packages/*
-  - packages/*/*
+
+ignore:
+  - "**/example"
+  - "**/example/**"
 
 command:
   bootstrap:

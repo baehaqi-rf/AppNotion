@@ -1,3 +1,4 @@
+resolution: workspace
 name: appflowy
 description: Bring projects, wikis, and teams together with AI. AppFlowy is an
   AI collaborative workspace where you achieve more without losing control of
@@ -8,7 +9,7 @@ version: 0.11.4
 
 environment:
   flutter: ">=3.27.4"
-  sdk: ">=3.3.0 <4.0.0"
+  sdk: ">=3.5.0 <4.0.0"
 
 dependencies:
   any_date: ^1.0.4
@@ -94,10 +95,10 @@ dependencies:
   image_picker: ^1.0.4
 
   #  third party packages
-  intl: ^0.19.0
+  intl: '>=0.19.0 <=0.21.0'
   json_annotation: ^4.8.1
   keyboard_height_plugin: ^0.1.5
-  leak_tracker: ^10.0.0
+  leak_tracker: '>=10.0.0 <12.0.0'
   linked_scroll_controller: ^0.2.0
 
   # Notifications
@@ -149,7 +150,7 @@ dependencies:
   talker_bloc_logger: ^4.8.1
   talker: ^4.7.1
 
-  analyzer: 6.11.0
+  analyzer: '>=6.0.0 <8.0.0'
 
   html: any
 dev_dependencies:

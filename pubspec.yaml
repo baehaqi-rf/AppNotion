@@ -4,7 +4,20 @@ version: 0.11.4
 publish_to: "none"
 
 environment:
-  sdk: ">=3.3.0 <4.0.0"
+  sdk: ">=3.5.0 <4.0.0"
+
+workspace:
+  - apps/appflowy
+  - packages/appflowy_backend
+  - packages/appflowy_popover
+  - packages/appflowy_result
+  - packages/appflowy_ui
+  - packages/flowy_infra
+  - packages/flowy_infra_ui
+  - packages/flowy_svg
 
 dev_dependencies:
   melos: ^8.10.0
+
+dependency_overrides:
+  intl: ^0.20.2
